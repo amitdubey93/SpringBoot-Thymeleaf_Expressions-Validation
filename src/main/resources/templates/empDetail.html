@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap.css">
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+</head>
+<body>
+	<div class="container">
+		<p>ID: <span th:text="${savedEmployee.id}"></span></p>
+		<p>First Name: <span th:text="${savedEmployee.firstName}"></span></p>
+		<p>Last Name: <span th:text="${savedEmployee.lastName}"></span></p>
+		<p>Address</p>
+		<p>State: <span th:text="${savedEmployee.address.state}"></span></p>
+		<p>Street: <span th:text="${savedEmployee.address.street}"></span></p>
+		<p>ZipCode: <span th:text="${savedEmployee.address.zipCode}"></span></p>
+	</div>
+
+
+</body>
+</html>

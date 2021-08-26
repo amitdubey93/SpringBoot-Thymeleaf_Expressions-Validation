@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap.css">
+<meta charset="ISO-8859-1">
+<title>Conditional Expression</title>
+</head>
+<body>
+	<div class="container">
+		<div class="mr-5 p-5">
+			<h2>If-Then</h2>
+			<p th:text="${person1.address} ? ${person1.address.street}">Default Person1 Street</p>
+			<p th:text="${person2.address} ? ${person2.address.street}">Default Person2 Street</p>
+			
+			
+			<h2>If-Then-Else</h2>
+			<p th:text="${person1.address} ? ${person1.address.zipCode}: 'not exist'">Default Zipcode 1</p>
+			<p th:text="${person2.address} ? ${person2.address.zipCode}: 'Person2 does not have an address'">Default Zipcode 2</p>
+			
+			<h2>Elvis Operator</h2>
+			<p th:text="${person1.address} ?: 'Not Exist'">Default Address 2</p>
+			<p th:text="${person2.address} ?: 'Person does not have an address..'">Default Address 2</p>
+			
+			<h2>If-Unless</h2>
+			<p th:if="${gender=='F'}">Female</p>
+			<p th:unless="${gender=='M'}">Male</p>
+		</div>
+	</div>
+
+</body>
+</html>
